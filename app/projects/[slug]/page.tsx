@@ -1,21 +1,23 @@
-'use client';
-
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 import { ArrowLeft } from 'lucide-react';
 import Footer from '@/components/Footer';
 import { projects } from '@/lib/data';
 import Badge from '@/components/atoms/Badge';
-import { use } from 'react';
 
-export default function ProjectPage({
+export async function generateStaticParams() {
+  return projects.map((project) => ({
+    slug: project.slug,
+  }));
+}
+
+export default async function ProjectPage({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
-  const { slug } = use(params);
+  const { slug } = await params;
   const project = projects.find((p) => p.slug === slug);
 
   if (!project) {
@@ -38,11 +40,7 @@ export default function ProjectPage({
             Back to projects
           </Link>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+          <div>
             <div className='relative w-full aspect-video rounded-lg overflow-hidden mb-12'>
               <Image
                 src={project.imageUrl}
@@ -98,7 +96,7 @@ export default function ProjectPage({
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {relatedProjects.length > 0 && (
             <div className='mt-24'>

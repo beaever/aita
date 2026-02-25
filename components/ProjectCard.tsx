@@ -25,7 +25,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       onMouseLeave={() => setIsHovered(false)}
     >
       <Link href={`/projects/${project.slug}`} className='block'>
-        <div className='relative w-full aspect-[3/2] overflow-hidden bg-black mb-6 rounded-3xl'>
+        <div className='relative w-full aspect-3/2 overflow-hidden bg-black mb-6 rounded-3xl'>
           <Image
             src={project.imageUrl}
             alt={project.title}

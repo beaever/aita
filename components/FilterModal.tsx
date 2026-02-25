@@ -88,7 +88,7 @@ export default function FilterModal({
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className='fixed right-0 top-0 bottom-0 w-full md:w-[480px] bg-black/95 backdrop-blur-xl border-l border-white/10 z-50 overflow-y-auto'
+            className='fixed right-0 top-0 bottom-0 w-full md:w-120 bg-black/95 backdrop-blur-xl border-l border-white/10 z-50 overflow-y-auto'
           >
             <div className='p-8'>
               <div className='flex items-center justify-between mb-10'>

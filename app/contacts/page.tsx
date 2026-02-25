@@ -27,7 +27,7 @@ export default function ContactsPage() {
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-12'>
               <div className='space-y-8'>
                 <div className='flex items-start gap-4'>
-                  <Mail className='mt-1 flex-shrink-0' size={24} />
+                  <Mail className='mt-1 shrink-0' size={24} />
                   <div>
                     <h3 className='font-bold mb-2'>Email</h3>
                     <a
@@ -40,7 +40,7 @@ export default function ContactsPage() {
                 </div>
 
                 <div className='flex items-start gap-4'>
-                  <Phone className='mt-1 flex-shrink-0' size={24} />
+                  <Phone className='mt-1 shrink-0' size={24} />
                   <div>
                     <h3 className='font-bold mb-2'>Phone</h3>
                     <a
@@ -53,7 +53,7 @@ export default function ContactsPage() {
                 </div>
 
                 <div className='flex items-start gap-4'>
-                  <MapPin className='mt-1 flex-shrink-0' size={24} />
+                  <MapPin className='mt-1 shrink-0' size={24} />
                   <div>
                     <h3 className='font-bold mb-2'>Office</h3>
                     <p className='text-white/70'>
